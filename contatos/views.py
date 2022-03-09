@@ -29,6 +29,7 @@ def index(request):
     return render(request, 'contatos/index.html', context)
 
 
+@login_required(redirect_field_name='login')
 def show(request, id):
 
     contato = get_object_or_404(Contato, id=id)
@@ -86,3 +87,7 @@ def list_contatos(request):
         return JsonResponse(serializer.data, safe=False)
 
     # return HttpResponse(JsonResponse(serializer.data, safe=False))
+
+
+def vue(request):
+    return render(request, "index.html")

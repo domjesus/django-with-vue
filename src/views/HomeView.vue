@@ -7,7 +7,7 @@
 <script>
 // @ is an alias to /src
 import axios from "axios";
-import ContatosComponent from "../components/ContatosComponent.vue";
+import ContatosComponent from "../components/ContatosComponent";
 
 export default {
   name: "HomeView",
