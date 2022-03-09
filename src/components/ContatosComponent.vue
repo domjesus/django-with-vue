@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Contatos</h3>
+    <h3>Contatos Alt</h3>
     <table class="table table-striped table-hover">
       <thead class="thead-dark">
         <th>Nome</th>
