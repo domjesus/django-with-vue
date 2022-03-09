@@ -9,10 +9,12 @@ from django.contrib.auth.decorators import login_required
 from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
 from .serializers import ContatoSerializer
+import os
 
 
 # @login_required(redirect_field_name='login')
 def index(request):
+    print(os.environ['APP_KEY'])
     # messages.add_message(request, messages.ERROR, "Ocorreu um erro!")
 
     contatos = Contato.objects.order_by('-id').filter(
