@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{%block title%}Dashboard User | {%endblock%}
+
+{% block conteudo %}
+{% include 'layouts/messages.html' %}
+<h1 class="mt-3 mb-3">
+    Olá {{user.first_name}} {{user.last_name}}
+</h1>
+<p>O seu nome de usuário é {{user}}</p>
+<button class="alert alert-danger"><a href="{% url 'logout' %}">Sair</a></button>
+{% endblock %}
